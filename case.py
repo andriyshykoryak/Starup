@@ -2,7 +2,7 @@
 #місце для твого коду
 import pandas as pd
 
-df = pd.read_csv('investments_VC.csv')
+df = pd.read_csv('InvestmentCleaned.csv')
 
 df = df.drop(['permalink','homepage_url','state_code','category_list'],axis=1)
 
@@ -29,7 +29,7 @@ df['funding_total_usd'] = df['funding_total_usd'].apply(cleancolumn)
 
 
 df = df.dropna()
-df.info()
-
-print(df['product_crowdfunding'].value_counts())
-df.to_csv('InvestmentCleaned.csv')
+# df.info()
+# print(df['country_code'].value_counts())
+# print(df['product_crowdfunding'].value_counts())
+# df.to_csv('InvestmentCleaned.csv')
